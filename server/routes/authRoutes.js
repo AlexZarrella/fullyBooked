@@ -10,8 +10,10 @@ authRoutes.post('/signup', (req, res, next) => {
     const password = req.body.password;
     const name     = req.body.name;
     const email    = req.body.email;
+    const location = req.body.location;
+    const service  = req.body.service;
   
-    if (!username || !password || !name || !email) {
+    if (!username || !password || !name || !email || !location || !service) {
       res.status(400).json({ message: 'Please fill in all fields' });
       return;
     }
@@ -28,7 +30,11 @@ authRoutes.post('/signup', (req, res, next) => {
   
       const theUser = new User({
         username,
-        password: hashPass
+        password: hashPass,
+        name,
+        email,
+        location,
+        service
       });
   
       theUser.save((err) => {
@@ -86,7 +92,8 @@ authRoutes.post('/signup', (req, res, next) => {
   
     res.status(403).json({ message: 'Unauthorized' });
   });
-  authRoutes.get('/private', (req, res, next) => {
+
+  authRoutes.get('/private/profile', (req, res, next) => {
     if (req.isAuthenticated()) {
       res.json({ message: 'This is a private message' });
       return;
@@ -95,15 +102,23 @@ authRoutes.post('/signup', (req, res, next) => {
     res.status(403).json({ message: 'Unauthorized' });
   });
 
-  authRoutes.get('user/userprofile', (req, res, next)=> {
-    Appointments.find()
-    .then((theUser)=> {
-      res.json(theUser)
+  authRoutes.get('/private/search', (req, res, next)=>{
+
+  })
+
+  authRoutes.get('/private/:id/profile', (req, res, next)=>{
+    const id = req.params.id;
+
+    User.findById(id)
+    .then((theUser)=>{
+      res.json(theUser);
     })
     .catch((err)=>{
-      next(err);
+      res.json(err);
     })
   })
+
+
 
   
 

@@ -5,7 +5,7 @@ const serviceSchema = new Schema({
   category: [String],
   description: String,
   pricing: String,
-  Appointments: [String]
+  appointments: [String]
 });
 
 const Service = mongoose.model('Service', serviceSchema);

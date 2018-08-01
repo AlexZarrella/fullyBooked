@@ -58,16 +58,16 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use((req, res, next) => {
-  res.sendfile(__dirname + '/public/index.html');
-});
+// app.use((req, res, next) => {
+//   res.sendfile(__dirname + '/public/index.html');
+// });
 
 
 
-// app.use(cors({
-//   credentials: true,
-//   origin: ['http://localhost:4200']
-// }))
+app.use(cors({
+  credentials: true,
+  origin: ['http://localhost:4200']
+}))
 
 const index = require('./routes/index');
 app.use('/', index);
@@ -75,7 +75,11 @@ app.use('/', index);
 const user = require('./routes/authRoutes');
 app.use('/api', user);
 
-const mentor = require('./routes/mentorRoutes');
-app.use('/api/mentor', mentor);
+const service = require('./routes/serviceRoutes');
+app.use('/api', service);
+
+const appointment = require('./routes/appointmentRoutes');
+app.use('/api', appointment);
+
 
 module.exports = app;

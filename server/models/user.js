@@ -9,9 +9,8 @@ const userSchema = new Schema({
   image: String,
   email: String,
   service: Boolean,
-  location: [String],
-  weeklyPreferences: [Array],
-  myAppointments: [String]
+  location: String,
+  myAppointments: [Array]
 });
 
 const User = mongoose.model('User', userSchema);
