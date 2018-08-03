@@ -1,21 +1,11 @@
 input:-webkit-autofill {
-<<<<<<< HEAD
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-}
-
-body {
-    background-color: blue;
-    height: 100vh;
-}
-=======
     -webkit-box-shadow: 0 0 0px 1000px #bff3e8 inset;
 }
 
 body {
     background: linear-gradient(#028090, #02c39a);
-    height: 100vh;
+    height: 140vh;
 }
-
 
 form {
     display: flex;
@@ -35,19 +25,17 @@ form button {
     font-family: 'Istok Web', sans-serif;
 }
 
-form span {
-    margin-top: 26%;
-    margin-left: 18%;
-    color: gray;
-}
-
 input {
     height: 4.5rem;
     background-color: #f0f3bd;
 }
 
+input:focus {
+    background-color: #bff3e8 ;
+}
+
 .login-form {
-    height: 42rem;
+    height: 74rem;
     margin-left: 35%;
     padding: 20px;
     width: 30%;
@@ -67,10 +55,9 @@ input {
 h1 {
     color: #f2f7a5;
     margin-left: 38%;
-    /* margin-top: 15%; */
     margin-bottom: 2%;
     margin-top: 0;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 h1 span {
@@ -86,12 +73,65 @@ h1 span {
 .fa { 
     position: absolute;
     margin-left: 17%;
+}
+
+#icon-name {
+    position: absolute;
+    margin-left: 17%;
     margin-top: 1%;
+}
+
+#icon-email {
+    position: absolute;
+    margin-left: 17%;
+    margin-top: 5.5%;
+}
+
+#icon-image {
+    position: absolute;
+    margin-left: 17%;
+    margin-top: 10%;
+}
+
+#icon-username {
+    position: absolute;
+    margin-left: 17%;
+    margin-top: 18.5%;
 }
 
 #icon-password {
     position: absolute;
     margin-left: 17%;
-    margin-top: 5.5%;
+    margin-top: 23%;
 }
->>>>>>> 653fb452cf419cfe605b4905ae3977dc687692d0
+
+
+.service-opt {
+    display: flex;
+    flex-direction: row;
+}
+
+p {
+    padding-right: 4%;
+}
+
+#yes, #no {
+    margin-top: -4.2%;
+}
+
+article {
+    padding-right: 2rem;
+    margin-left: 1rem;
+}
+
+.disclaimer-div {
+    width: 95%;
+    text-align: center;
+    padding-bottom: 6%;
+}
+
+#disclaimer {
+    font-size: 12px;
+    text-align: center;
+    color: gray;
+}

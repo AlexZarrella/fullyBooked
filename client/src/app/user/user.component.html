@@ -7,22 +7,16 @@
   <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
 <!-- <div *ngIf= "theActualUser.username">
+=======
+  
+<div *ngIf= "theActualUser.username">
+>>>>>>> 653fb452cf419cfe605b4905ae3977dc687692d0
   <p>You are now logged in as:  {{loginUser.username}} </p>
 </div>
-  <button (click)= "logMeOut()">Log Out</button>
-  <button (click)= "checkIfLoggedIn()">Check If Logged In</button>
 
-<h2>Create An Account</h2>
-
-<form (submit)="tryToSignUp()">
-
-  <input type="text" [(ngModel)]= "signUpUser.name" name= "user" placeholder= "name">
-
-  <input type="text" [(ngModel)]= "signUpUser.username" name= "user" placeholder= "username">
-
-  <input type="password" [(ngModel)]="signUpUser.password" name="user" placeholder="password">
-
+<<<<<<< HEAD
   <input type="text" [(ngModel)]="signUpUser.email" name="user" placeholder="Email">
 
 dropdown menu -->
@@ -63,5 +57,26 @@ dropdown menu -->
 
 <div *ngIf= "theError">{{theError}}</div>
 
+=======
+  <h1><span>fully</span><span id="booked">Booked</span></h1>
+
+<div class="login-form">
+  <h2>Login</h2>
+    <br>
+    <form (submit)="tryToLogIn()">
+      <input type="text" [(ngModel)]= "loginUser.username" name= "user" placeholder= "username">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <br>
+      <input type="password" [(ngModel)]="loginUser.password" name="user" placeholder="password">
+      <i class="fa fa-lock" id="icon-password" aria-hidden="true"></i>
+      <br>
+        <button>LOGIN</button>
+        <span>Not a member? <a [routerLink]="['signup']">Sign up now</a></span>
+    </form>
+</div>
+
+<div *ngIf= "theError">{{theError}}</div>
+
+>>>>>>> 653fb452cf419cfe605b4905ae3977dc687692d0
 </body>
 </html>

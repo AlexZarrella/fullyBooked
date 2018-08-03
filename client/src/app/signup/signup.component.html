@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1><span>fully</span><span id="booked">Booked</span></h1>
+
+<div class="login-form">
+  <h2>Sign Up</h2>
+    <br>
+    <form (submit)="tryToSignUp()">
+      <input type="text" [(ngModel)]= "signUpUser.name" name= "user" placeholder= "name">
+        <i class="fa fa-user-circle" id="icon-name" aria-hidden="true"></i>
+        <br>
+      <input type="text" [(ngModel)]= "signUpUser.email" name= "user" placeholder= "email">
+        <i class="fa fa-envelope" id="icon-email"  aria-hidden="true"></i>
+        <br>
+      <input type="text" name="user" placeholder="imageURL">
+        <i class="fa fa-file-image-o" id="icon-image" aria-hidden="true"></i>
+        <br>
+        <div class= "service-dropdown">
+            <select class="selectpicker" [(ngModel)]= "signUpUser.location" title="Choose City">
+              <option value= "boca">Boca Raton</option>
+              <option value= "coral gables">Coral Gables</option>
+              <option value= "coral springs">Coral Springs</option>
+              <option value= "davie">Davie</option>
+              <option value= "fort lauderdale">Fort Lauderdale</option>
+              <option value= "hialeah">Hialeah</option>
+              <option value= "hollywood">Hollywood</option>
+              <option value= "lauderhill">Lauderhill</option>
+              <option value= "miami">Miami</option>
+              <option value= "miramar">Miramar</option>
+              <option value= "opa-locka">Opa-Locka</option>
+              <option value= "pembroke pines">Pembroke Pines</option>
+              <option value= "plantation">Plantation</option>
+              <option value= "pompano">Pompano</option>
+              <option value= "tamarac">Tamarac</option>
+              <option value= "west palm beach">West Palm Beach</option>
+              <option value= "weston">Weston</option>
+            </select>
+        </div>
+        <br>
+      <input type="text" [(ngModel)]="signUpUser.username" name="user" placeholder="username">
+        <i class="fa fa-user" id="icon-username" aria-hidden="true"></i>
+        <br>
+      <input type="password" [(ngModel)]="signUpUser.password" name="user" placeholder="password">
+        <i class="fa fa-lock" id="icon-password" aria-hidden="true"></i>
+        <br>
+        <div class="service-opt">
+          <p>Will you be a mentor?</p> 
+          <br>
+          <input type="radio" name="joke" value="true" id= "yes"/> <article>Yes</article>
+          <input type="radio" name="joke" value="false" id= "no"/> <article>No</article>
+        </div>
+        <div class="disclaimer-div">
+        <span id="disclaimer">* If you choose to be a mentor, you are providing a service to other users. 
+        Some services include tutoring, personal training, piano lessons, etc.</span>
+        </div>
+        <button>SIGN UP</button>
+    </form>
+</div>
+
+<div *ngIf= "theError">{{theError}}</div>
+
+</body>
+</html>

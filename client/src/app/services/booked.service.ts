@@ -43,6 +43,11 @@ export class BookedService {
       .catch(this.handleError);
   }
 
+  newService(newServiceEntry) {
+    return this.http.post(`http://localhost/api/services/create`, newServiceEntry, {withCredentials: true})
+    .map(res => res.json())
+    .catch(this.handleError);
+  }
 
 
 }
