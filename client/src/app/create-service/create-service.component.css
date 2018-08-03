@@ -1,0 +1,26 @@
+nav {
+    background-color: olivedrab;
+    height: 4.5rem;
+    background: linear-gradient(#05668d, #00a896);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    list-style: none;
+    margin-right: 3rem;
+    margin-top: 1%;
+}
+
+li a {
+    color: whitesmoke;
+    font-family: 'Istok Web', sans-serif;  
+    font-size: 15px;
+}
+
+form {
+    margin-top: 10%;
+}
