@@ -1,5 +1,13 @@
-
-<div *ngIf= "theActualUser.username">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<!-- <div *ngIf= "theActualUser.username">
   <p>You are now logged in as:  {{loginUser.username}} </p>
 </div>
   <button (click)= "logMeOut()">Log Out</button>
@@ -17,8 +25,8 @@
 
   <input type="text" [(ngModel)]="signUpUser.email" name="user" placeholder="Email">
 
-<!-- dropdown menu -->
-<div class= "service-dropdown">
+dropdown menu -->
+<!-- <div class= "service-dropdown">
   <select class="selectpicker">
     <option value= "true">Yes</option>
     <option value= "false">No</option>
@@ -32,9 +40,12 @@
 
 
 </form>
-<hr>
+<hr> --> 
 
-<h2>Login Form</h2>
+<!-- <h3>Login Form</h3> -->
+<p>Will you?</p>
+<input type="radio" name="joke" value="bed" /> A Bed
+<input type="radio" name="joke" value="snake" /> A Snake
 
 <form (submit)="tryToLogIn()">
 
@@ -51,3 +62,6 @@
 </form>
 
 <div *ngIf= "theError">{{theError}}</div>
+
+</body>
+</html>
