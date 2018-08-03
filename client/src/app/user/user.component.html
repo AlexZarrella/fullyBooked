@@ -1,53 +1,35 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
 <div *ngIf= "theActualUser.username">
   <p>You are now logged in as:  {{loginUser.username}} </p>
 </div>
-  <button (click)= "logMeOut()">Log Out</button>
-  <button (click)= "checkIfLoggedIn()">Check If Logged In</button>
 
-<h2>Create An Account</h2>
+  <h1><span>fully</span><span id="booked">Booked</span></h1>
 
-<form (submit)="tryToSignUp()">
-
-  <input type="text" [(ngModel)]= "signUpUser.name" name= "user" placeholder= "name">
-
-  <input type="text" [(ngModel)]= "signUpUser.username" name= "user" placeholder= "username">
-
-  <input type="password" [(ngModel)]="signUpUser.password" name="user" placeholder="password">
-
-  <input type="text" [(ngModel)]="signUpUser.email" name="user" placeholder="Email">
-
-<!-- dropdown menu -->
-<div class= "service-dropdown">
-  <select class="selectpicker">
-    <option value= "true">Yes</option>
-    <option value= "false">No</option>
-  </select>
+<div class="login-form">
+  <h2>Login</h2>
+    <br>
+    <form (submit)="tryToLogIn()">
+      <input type="text" [(ngModel)]= "loginUser.username" name= "user" placeholder= "username">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <br>
+      <input type="password" [(ngModel)]="loginUser.password" name="user" placeholder="password">
+      <i class="fa fa-lock" id="icon-password" aria-hidden="true"></i>
+      <br>
+        <button>LOGIN</button>
+        <span>Not a member? <a [routerLink]="['signup']">Sign up now</a></span>
+    </form>
 </div>
 
-  <button>Complete Registration</button>
-
-
-
-
-
-</form>
-<hr>
-
-<h2>Login Form</h2>
-
-<form (submit)="tryToLogIn()">
-
-<input type="text" [(ngModel)]= "loginUser.username" name= "user" placeholder= "username">
-
-<input type="password" [(ngModel)]="loginUser.password" name="user" placeholder="password">
-
-
-
-<button>Log In</button>
-
-
-
-</form>
-
 <div *ngIf= "theError">{{theError}}</div>
+
+</body>
+</html>
