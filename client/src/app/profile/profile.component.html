@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>Booked Appointments</a></li>
+          <li><a>Logout</a></li>
+        </ul>
+      </div>
+        <h1><span>fully</span><span id="booked">Booked</span></h1>
+      
+          <div class="profile">
+              <i class="fa fa-pencil-square-o fa-2x" id="edit" aria-hidden="true"></i>
+              <div *ngIf="theActualUser.username" class="user-info">
+                  <h3>{{theActualUser.name}}</h3>
+                  <span><i class="fa fa-envelope" id= "email-icon" aria-hidden="true"></i>{{theActualUser.email}}</span>
+                  <span><i class="fa fa-map-marker" id="marker" aria-hidden="true"></i>
+                    {{theActualUser.location}}</span>
+              </div>
+
+              <div class="networks">
+                <i class="fa fa-instagram fa-2x" id="instagram" aria-hidden="true"></i>
+                <i class="fa fa-twitter fa-2x" id="twitter"></i>
+                <i class="fa fa-linkedin fa-2x" id="linkedin"></i>
+              </div>
+
+          </div>
+
+    <div class="body-sec">
+          <div class="services">
+            <div class= "add-service">
+            <h4>Freelance Work</h4>
+            <button><a [routerLink]= "['services/create']">+ Add</a></button>
+          </div>
+
+          <div class="job-section">
+            <div *ngFor = "let oneJob of arrayOfJobs" class="job">
+                <h4>{{oneJob.category}}</h4>
+                <span>{{oneJob.pricing}}</span>
+                <br>
+                <a [routerLink]= "[ 'services', oneJob._id]">Details</a>
+            </div>
+                <!-- <button (click)="deleteJob()" class="button1">Delete</button> -->
+
+          </div>
+
+          </div>
+          
+          <div class="appointments">
+            <h4>Appointments</h4>
+          </div>
+
+        </div>
+        
+        <div class="schedule">
+          <h4>Schedule</h4>
+            <div class="days">
+
+              <div class="monday">
+              <h4>Monday</h4>
+              <div class="scroll">
+                <div *ngFor= "let oneDay of weeklySchedule.monday; let i = index" class= "monday-time">
+                  <button (click) = "addSlot(i, 'monday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                </div>
+              </div>
+            </div>
+
+              <div class="tuesday">
+                <h4>Tuesday</h4>
+                <div class="scroll">
+                <div *ngFor= "let oneDay of weeklySchedule.tuesday; let i = index" class="tuesday-time">
+                    <button (click) = "addSlot(i, 'tuesday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                </div>
+              </div>
+              </div>
+
+              <div class="wednesday">
+                <h4>Wednesday</h4>
+                <div class="scroll">
+                <div *ngFor= "let oneDay of weeklySchedule.wednesday; let i = index" class="wednesday-time">
+                    <button (click) = "addSlot(i, 'wednesday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                </div>
+              </div>
+            </div>
+
+              <div class="thursday">
+                  <h4>Thursday</h4>
+                  <div class="scroll">
+                  <div *ngFor= "let oneDay of weeklySchedule.thursday; let i = index" class="thursday-time">
+                      <button (click) = "addSlot(i, 'thursday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                  </div>
+              </div>
+            </div>
+
+              <div class="friday">
+                  <h4>Friday</h4>
+                  <div class="scroll">
+                  <div *ngFor= "let oneDay of weeklySchedule.friday; let i = index" class="friday-time">
+                      <button (click) = "addSlot(i, 'friday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                  </div>
+              </div>
+            </div>
+
+              <div class="saturday">
+                  <h4>Saturday</h4>
+                  <div class="scroll">
+                  <div *ngFor= "let oneDay of weeklySchedule.saturday; let i = index" class="saturday-time">
+                      <button (click) = "addSlot(i, 'saturday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                  </div>
+              </div>
+            </div>
+
+              <div class="sunday">
+                  <h4>Sunday</h4>
+                  <div class="scroll">
+                  <div *ngFor= "let oneDay of weeklySchedule.sunday; let i = index" class="sunday-time">
+                      <button (click) = "addSlot(i, 'sunday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

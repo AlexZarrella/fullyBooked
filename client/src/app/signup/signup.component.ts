@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormsModule} from '@angular/forms'
-import { BookedService } from '../services/booked.service'
+import { BookedService } from '../services/booked.service';
+import { ActivatedRoute } from "@angular/router";
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-signup',
@@ -15,13 +17,15 @@ export class SignupComponent implements OnInit {
 
   theError:any;
 
-  constructor(private bookedService: BookedService) { }
+  constructor(private  bookedService: BookedService, 
+    private router : Router,
+    private myRoutes : ActivatedRoute ) { }
 
   tryToSignUp(){
     console.log(this.signUpUser)
     this.bookedService.signup(this.signUpUser)
     .subscribe(
-      res =>{ this.successCallback(res)},
+      res =>{ this.successCallback(res), this.router.navigate(['']) },
       error=>{this.errorCallback(error)},
       
     );
@@ -39,6 +43,7 @@ export class SignupComponent implements OnInit {
 
 
   ngOnInit() {
+   
   }
 
 }

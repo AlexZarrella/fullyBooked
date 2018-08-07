@@ -7,25 +7,54 @@
   <title>Document</title>
 </head>
 <body>
-  <nav>
+  <div class="nav">
     <ul>
       <li><a>Home</a></li>
       <li><a>Booked Appointments</a></li>
       <li><a>Logout</a></li>
     </ul>
-  </nav>
-  <form (submit)= "newService()">
-      <div class="add">
-          
-          <input name="name" [(ngModel)]="newServiceInfo.category" placeholder="category">
+  </div>
+    <h1><span>fully</span><span id="booked">Booked</span></h1>
+  <form (submit)= "newServiceEntry()">
+      <div class="service-form">
+          <h3>Create Service</h3>
+          <div class= "service-dropdown">
+              <select class="selectpicker" [(ngModel)]= "newServiceInfo.category" name= "category" title="Service Category">
+                <option value= "Accounting">Accounting</option>
+                <option value= "Acting">Acting</option>
+                <option value= "Advertising">Advertising</option>
+                <option value= "Audio Production">Audio Production</option>
+                <option value= "Ausiness Writing">Business Writing</option>
+                <option value= "Cooking">Cooking</option>
+                <option value= "Computer Programming">Computer Programming</option>
+                <option value= "Creative Writing">Creative Writing</option>
+                <option value= "Dog Training">Dog Training</option>
+                <option value= "Drawing">Drawing</option>
+                <option value= "E-commerce">E-Commerce</option>
+                <option value= "Engineering">Engineering</option>
+                <option value= "Event Planning">Event Planning</option>
+                <option value= "Fashion Design">Fashion Design</option>
+                <option value= "Fitness Trainer">Fitness Trainer</option>
+                <option value= "Graphic Design">Graphic Design</option>
+                <option value= "Home Cleaning">Home Cleaning</option>
+                <option value= "Interior Design">Interior Design</option>
+                <option value= "Law">Law</option>
+                <option value= "Makeup Artist">Makeup Artist</option>
+                <option value= "Mechanic">Mechanic</option>
+                <option value= "Musical Instruments">Musical Instruments</option>
+                <option value= "Nuntritionist">Nutritionist</option>
+                <option value= "Singing">Singing</option>
+                <option value= "Photography">Photography</option>
+                <option value= "Tutoring">Tutoring</option>
+                <option value= "Video Production">Video Production</option>
+                <option value= "Web Design">Web Design</option>
+              </select>
+          </div> 
           <br>
-    
-          <input name="name" [(ngModel)]="newServiceInfo.description" placeholder="description">
-          <br>
-  
+          <textarea cols= "39" rows="5" name="name" [(ngModel)]="newServiceInfo.description" placeholder="description"></textarea>
+          <br> 
           <input name="name" [(ngModel)]="newServiceInfo.pricing" placeholder="hourly pricing">
-          <br>
-  
+          <br> 
           <button>Create</button>
         </div>
   

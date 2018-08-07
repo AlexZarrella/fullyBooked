@@ -7,8 +7,9 @@ const Appointments = require('../models/appointment');
 const Service      =require('../models/service');
 
 //mentor creates service
-serviceRouter.post('/services/create', (req, res, next)=> {
+serviceRouter.post('/private/profile/services/create', (req, res, next)=> {
     Service.create({
+        user: req.user._id,
         category: req.body.category,
         description: req.body.description,
         pricing: req.body.pricing,
@@ -22,20 +23,20 @@ serviceRouter.post('/services/create', (req, res, next)=> {
 })
 
 //mentor edit service
-serviceRouter.post('/services/:id/edit', (req, res, next)=> {
-    const id = req.params.id;
+// serviceRouter.post('/private/profile/services/:id/edit', (req, res, next)=> {
+//     const id = req.params.id;
 
-    Service.findById(id)
-    .then((theService)=>{
-        res.json(theService)
-    })
-    .catch((err)=>{
-        res.json(err);
-    })
-});
+//     Service.findById(id)
+//     .then((theService)=>{
+//         res.json(theService)
+//     })
+//     .catch((err)=>{
+//         res.json(err);
+//     })
+// });
 
 //update service
-serviceRouter.post('/services/:id/update', (req, res, next)=>{
+serviceRouter.post('/private/profile/services/:id/edit', (req, res, next)=>{
     const id = req.params.id;
 
     Service.findByIdAndUpdate(id, {
@@ -52,15 +53,27 @@ serviceRouter.post('/services/:id/update', (req, res, next)=>{
 })
 
 //delete service
-serviceRouter.post('/services/:id/delete', (req, res, next)=>{
+serviceRouter.post('/private/profile/services/:id/delete', (req, res, next)=>{
     const id = req.params.id;
 
     Service.findByIdAndRemove(id)
     .then((theService)=>{
-        res.json(theService)
+        res.json('/private/profile')
     })
     .catch((err)=>{
         res.json(err);
+    })
+})
+
+serviceRouter.get('/private/profile/services/:id', (req, res, next)=>{
+    const id = req.params.id
+
+    Service.findById(id)
+        .then((theService)=>{
+            res.json(theService)
+    })
+        .catch((err)=>{
+        res.json(err)
     })
 })
 

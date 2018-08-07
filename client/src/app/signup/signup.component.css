@@ -3,9 +3,10 @@ input:-webkit-autofill {
 }
 
 body {
-    background: linear-gradient(#028090, #02c39a);
-    height: 140vh;
+    background-color: white;
+    height: 100vh; 
 }
+
 
 form {
     display: flex;
@@ -20,14 +21,15 @@ form button {
     width: 100%;
     height: 45px;
     border-radius: 5px;
-    background: linear-gradient(#028090, #02c39a);
+    background: linear-gradient(#a3bded, #6991c7);
     color: white;
     font-family: 'Istok Web', sans-serif;
 }
 
+
 input {
     height: 4.5rem;
-    background-color: #f0f3bd;
+    background-color: white;
 }
 
 input:focus {
@@ -40,24 +42,24 @@ input:focus {
     padding: 20px;
     width: 30%;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255);
+    background-color: #a3bded;
 }
 
 .login-form h2 {
     margin-left: 36%;
-    background: -webkit-linear-gradient(#028090, #02c39a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;  
+    color: white; 
     font-size: 40px;
     font-family: 'Neucha', cursive;
 }
 
+.logo {
+    display: flex;
+    padding-bottom: 1%;
+}
+
 h1 {
-    color: #f2f7a5;
+    color: #a3bded;
     margin-left: 38%;
-    margin-bottom: 2%;
-    margin-top: 0;
-    padding-top: 5%;
 }
 
 h1 span {
@@ -90,7 +92,7 @@ h1 span {
 #icon-image {
     position: absolute;
     margin-left: 17%;
-    margin-top: 10%;
+    margin-top: 14%;
 }
 
 #icon-username {
@@ -113,6 +115,8 @@ h1 span {
 
 p {
     padding-right: 4%;
+    color: white;
+    font-size: 14px;
 }
 
 #yes, #no {
@@ -122,6 +126,7 @@ p {
 article {
     padding-right: 2rem;
     margin-left: 1rem;
+    color: white;
 }
 
 .disclaimer-div {
@@ -133,5 +138,54 @@ article {
 #disclaimer {
     font-size: 12px;
     text-align: center;
-    color: gray;
+    color: white;
+    letter-spacing: 1px;
 }
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-top: 1%;
+  }
+
+  .pink {
+      background-color: #fa7c92;
+      /* margin-top: 7%; */
+      /* margin-left: -15%;
+      margin-right: 0; */
+      box-shadow: 5px 5px 5px grey;
+    }
+
+    .blue {
+      background-color: #a3bded;
+      /* margin-top: 7%; */
+      /* margin-left: -10%;
+      margin-right: 0; */
+      box-shadow: 5px 5px 5px grey;
+    }
+
+  .green {
+    background-color: #66ab8c;
+    /* margin-top: 7%; */
+    /* margin-right: 0;
+    margin-left: 16%; */
+    box-shadow: 5px 5px 5px grey;
+  }
+
+  .white {
+      background-color: rgb(199, 196, 185);
+      /* margin-top: 7%; */
+      /* margin-right: 0;
+      margin-left: 10%; */
+      box-shadow: 5px 5px 5px grey;
+  } 
+
+  .dots {
+      display: flex;
+      flex-direction: row;
+      width: 290px;
+      margin-left: 40.2%;
+      justify-content: space-around;
+      margin-bottom: 2%;
+  }

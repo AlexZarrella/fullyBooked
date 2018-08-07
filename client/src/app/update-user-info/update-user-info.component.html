@@ -1,0 +1,61 @@
+
+
+
+<div class="nav">
+  <ul>
+    <li><a>Home</a></li>
+    <li><a>Booked Appointments</a></li>
+    <li><a>Logout</a></li>
+  </ul>
+</div>
+  <h1><span>fully</span><span id="booked">Booked</span></h1>
+
+  <form (submit)= "editUser(id)">
+    <div class="service-form">
+        <h3>Edit Service</h3>
+        <input type="text" [(ngModel)]= "theUpdatedUser.name" name= "user" value = "{{theActualUser.name}}" placeholder= "name">
+        <i class="fa fa-user-circle" id="icon-name" aria-hidden="true"></i>
+        <br>
+      <input type="text" [(ngModel)]= "theUpdatedUser.email" name= "user" value = "{{theActualUser.email}}"placeholder= "email">
+        <i class="fa fa-envelope" id="icon-email"  aria-hidden="true"></i>
+        <br>
+        <div class= "service-dropdown">
+            <select class="selectpicker" [(ngModel)]= "theUpdatedUser.location" value = "{{theActualUser.location}}" name="blah" title="Choose City">
+              <option value= "boca">Boca Raton</option>
+              <option value= "coralgables">Coral Gables</option>
+              <option value= "coralsprings">Coral Springs</option>
+              <option value= "davie">Davie</option>
+              <option value= "fortlauderdale">Fort Lauderdale</option>
+              <option value= "hialeah">Hialeah</option>
+              <option value= "hollywood">Hollywood</option>
+              <option value= "lauderhill">Lauderhill</option>
+              <option value= "miami">Miami</option>
+              <option value= "miramar">Miramar</option>
+              <option value= "opa-locka">Opa-Locka</option>
+              <option value= "pembrokepines">Pembroke Pines</option>
+              <option value= "plantation">Plantation</option>
+              <option value= "pompano">Pompano</option>
+              <option value= "tamarac">Tamarac</option>
+              <option value= "westpalmbeach">West Palm Beach</option>
+              <option value= "weston">Weston</option>
+            </select>
+        </div>
+        <!-- <input type="text" name="user" placeholder="imageURL">
+        <i class="fa fa-file-image-o" id="icon-image" aria-hidden="true"></i>
+        <br> -->
+ 
+      <input type="text" [(ngModel)]= "theUpdatedUser.username" name="user" value = "{{theActualUser.username}}" placeholder="username">
+        <i class="fa fa-user" id="icon-username" aria-hidden="true"></i>
+        <br>
+
+        <input type="text" name= "instagram" placeholder= "instagram URL">
+        <input type="text" name= "twitter" placeholder= "twitter URL">
+        <input type="text" name= "linkedin" placeholder= "linkedIn URL">
+
+        <button>Submit</button>
+      </div>
+
+</form>
+
+
+

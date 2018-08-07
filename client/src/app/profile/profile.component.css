@@ -1,0 +1,321 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.nav {
+    height: 4.5rem;
+}
+
+body {
+    background-color: white;
+    height: 110vh;
+}
+
+h1 {
+    color: #a3bded;
+    margin-left: 87%;
+    margin-top: -3.1%;
+}
+
+h1 span {
+    font-family: 'Neucha', cursive;
+    font-size: 26px; 
+}
+
+i {
+    color: white;
+}
+
+.networks {
+    margin-left: 38%;
+    margin-top: 5%;
+}
+
+#instagram {
+    margin-right: 12px;
+    /* color: #98A148; */
+    color: rgba(0, 0, 0, 0.781);
+}
+
+#twitter {
+    margin-right: 12px;
+    color: rgba(0, 0, 0, 0.781);
+    /* color: #98A148; */
+}
+
+#linkedin {
+    margin-right: 12px;
+    /* color: #98A148; */
+    color: rgba(0, 0, 0, 0.781);
+}
+
+#booked {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 33px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    list-style: none;
+    margin-right: 3rem;
+    margin-top: 1%;
+}
+
+li a {
+    color: #a3bded;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.body-sec {
+    position: relative;
+    margin: 0 auto;
+    margin-left: 50%;
+    margin-top: 6%;
+}
+
+.profile { 
+    float: left;
+    margin-left: 9%;
+    height: 45%;
+    width: 30%;
+    margin-top: 9%;
+    margin-right: 1.5%;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.3);
+    border: 3px solid white;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50%;
+    margin-top: 30%;
+    text-align: center;
+    margin-left: 0;
+}
+
+.user-info h3 {
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 35px;
+}
+
+.user-info span {
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    margin-top: 5%;
+}
+
+.services { 
+    margin-top:0;
+    height: 25rem;
+    width: 95%;
+    margin-left: -10%;
+    border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgb(163, 189, 237);
+    border: 3px solid white;
+}
+
+.add-service {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid white;
+}
+
+.services h4 {
+    padding-left: 2%;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.services button {
+    width: 8rem;
+    height: 2.5rem;
+    border: 2px solid white;
+    margin-left: 65%;
+    border-radius: 5px;
+    margin-top: 1%;
+    /* background: linear-gradient(#a3bded, #6991c7); */
+    background-color: #98A148;
+}
+
+.services button a {
+    color: white;
+}
+
+.schedule {
+    margin-top: 1%;
+    height: 50rem;
+    width:84%;
+    margin-left: 9%;
+    border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgb(163, 189, 237);
+    border: 3px solid white;
+    margin-bottom: 5rem;
+}
+
+.schedule h4 {
+    padding-left: 2%;
+    padding-bottom: 1%;
+    color: white;
+    border-bottom: 2px solid white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.appointments {
+    margin-top: 1%;
+    height: 25rem;
+    width: 95%;
+    margin-left: -10%;
+    border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgb(163, 189, 237);
+    border: 3px solid white;
+}
+
+.appointments h4 {
+    padding-left: 2%;
+    color: white;
+    padding-bottom: 1%;
+    border-bottom: 2px solid white;
+    font-family: 'Quicksand', sans-serif;    
+}
+
+.job {
+    margin-left: 2%;
+    text-align: center;
+    align-content: center;
+    width: 50%;
+    height: 80%;
+    background-color: white;
+    padding: 30px;
+    margin-top: 4%;
+    border-radius: 10px;
+}
+
+.job-section { 
+    display: flex; 
+    flex-direction: row;
+    overflow: scroll;
+    height: 180px;
+    width: 90%;
+    margin-left: 3%;
+}
+.job h4 {
+    margin-top: 0;
+    color: black;
+}
+
+.job a {
+    color: #98A148;
+    margin-top: 90%;
+}
+
+.days {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+    justify-content: space-around;
+}
+
+.days button {
+    border-radius: 5px;
+    /* background-color: white; */
+    /* color: #a3bded; */
+    width: 100%;
+    height: 45px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#email-icon {
+    margin-right: 1%;
+    color: black;
+}
+
+#marker {
+    color: black;
+}
+
+#edit {
+    margin-left: 91%;
+    margin-top: 4%;
+    color: black;
+}
+
+.monday-time {
+    display: flex;
+    width: 12rem;
+    margin-bottom: 4%;
+}
+
+.monday h4, .tuesday h4, .wednesday h4, .thursday h4, .friday h4, .saturday h4, .sunday h4 {
+    text-align: center;
+}
+
+.tuesday-time {
+    display: flex;
+    width: 12rem;
+    margin-bottom: 4%;
+}
+
+.wednesday-time {
+    display: flex;
+    width: 12rem;
+    margin-bottom: 4%;
+}
+
+.thursday-time {
+    display: flex;
+    width: 12rem;
+    margin-bottom: 4%;
+}
+
+.friday-time {
+    display: flex;
+    width: 12rem;
+    margin-bottom: 4%;
+}
+
+.saturday-time {
+    display: flex;
+    width: 12rem;
+    margin-bottom: 4%;
+}
+
+.sunday-time {
+    display: flex;
+    width: 12rem;
+    margin-bottom: 4%;
+}
+
+.scroll {
+    height: 100%;
+    overflow: scroll;
+}
+
+.available {
+    border: solid 2px rgb(212, 212, 212);
+    background-color: gray;
+    color: white;
+}
+
+.unavailable {
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+

@@ -1,18 +1,41 @@
-input:-webkit-autofill {
-<<<<<<< HEAD
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
 }
 
-body {
-    background-color: blue;
-    height: 100vh;
-}
-=======
+input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #bff3e8 inset;
 }
 
+input:focus {
+    background-color: #bff3e8 ;
+}
+
 body {
-    background: linear-gradient(#028090, #02c39a);
+    background-color: white;
     height: 100vh;
 }
 
@@ -22,6 +45,7 @@ form {
     flex-direction: column;
     width: 70%;
     margin-left: 14%;
+    margin-top: 5%;
     padding-bottom: 3%;
 }
 
@@ -30,7 +54,7 @@ form button {
     width: 100%;
     height: 45px;
     border-radius: 5px;
-    background: linear-gradient(#028090, #02c39a);
+    background: linear-gradient(#a3bded, #6991c7);
     color: white;
     font-family: 'Istok Web', sans-serif;
 }
@@ -38,49 +62,77 @@ form button {
 form span {
     margin-top: 26%;
     margin-left: 18%;
-    color: gray;
+    color: white;
 }
 
 input {
+    margin-top: -1%;
     height: 4.5rem;
-    background-color: #f0f3bd;
+    background-color: white;
+}
+
+.logo {
+    float: left;
+    align-content: center;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 11%;
+}
+
+#easy {
+    font-family: 'Rochester', cursive;
+    font-size: 24px;
+    margin-left: 20%;
+    opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:2.5s;
+	-moz-animation-duration:2.5s;
+	animation-duration:2.5s;
 }
 
 .login-form {
-    height: 42rem;
-    margin-left: 35%;
+    float: right;
+    height: 100%;
     padding: 20px;
     width: 30%;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255);
+    background: linear-gradient(#a3bded, #6991c7);
 }
 
 .login-form h2 {
-    margin-left: 36%;
-    background: -webkit-linear-gradient(#028090, #02c39a);
+    margin-left: 32%;
+    background-color: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
     font-size: 40px;
-    font-family: 'Neucha', cursive;
+    margin-top: 50%;
+    /* margin-bottom: -30%; */
+    font-family: 'Hind Guntur', sans-serif;
 }
 
 h1 {
-    color: #f2f7a5;
-    margin-left: 38%;
-    /* margin-top: 15%; */
-    margin-bottom: 2%;
-    margin-top: 0;
+    color: #a3bded;
+    margin-top: 10%;
+    float: left;
+    margin-left: 25%;
     padding-top: 10%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 h1 span {
     font-family: 'Neucha', cursive;
-    font-size: 70px; 
+    font-size: 80px; 
 }
 
 #booked {
     font-family: 'Fredericka the Great', cursive;
-    font-size: 72px;
+    font-size: 82px;
 }
 
 .fa { 
@@ -94,4 +146,41 @@ h1 span {
     margin-left: 17%;
     margin-top: 5.5%;
 }
->>>>>>> 653fb452cf419cfe605b4905ae3977dc687692d0
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    float: left;
+    margin-top: 30%; 
+  }
+
+  
+  .pink {
+      background-color: #fa7c92;
+      margin-left: -27%;
+      margin-right: 0;
+      box-shadow: 5px 5px 5px grey;
+    }
+
+    .blue {
+      background-color: #a3bded;
+      margin-left: -21%;
+      margin-right: 0;
+      box-shadow: 5px 5px 5px grey;
+    }
+
+  .green {
+    background-color: #66ab8c;
+    margin-left: -15%;
+    margin-right: 0;
+    box-shadow: 5px 5px 5px grey;
+  }
+
+  .white {
+      background-color: rgb(199, 196, 185);
+      margin-left: -9%;
+      margin-right: 0;
+      box-shadow: 5px 5px 5px grey;
+  }
