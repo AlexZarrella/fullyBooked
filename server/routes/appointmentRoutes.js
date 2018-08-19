@@ -60,37 +60,7 @@ User.findById(req.user._id)
 })
 })
 
-apptRouter.post('/appointments/create', (req, res, next)=> {
 
-    Appointments.create({
-        booked: req.body.booked,
-        isPassed: req.body.isPassed,
-        timeDate: req.body.timeDate
-    })
-    .then((response)=>{
-        res.json(response)
-    })
-    .catch((err)=>{
-        res.json(err);
-    })
-});
-
-//edit and update
-apptRouter.post('/appointments/:id/update', (req, res, next)=>{
-    const id = req.params.id;
-
-    Appointments.findByIdAndUpdate(id, {
-        booked: req.body.booked,
-        isPassed: req.body.isPassed,
-        timeDate: req.body.timeDate
-    })
-    .then((theUpdatedAppt)=>{
-        res.json(theUpdatedAppt)
-    })
-    .catch((err)=>{
-        res.json(err);
-    })
-});
 
 //delete route
 apptRouter.post('/appointments/:id/delete', (req, res, next)=>{
